@@ -66,12 +66,12 @@ phpmyadmin:
 ####################################################
 
 
-mongodb: 
-    build: ./images/mongo/
-    container_name: mongo
-    ports:
-        - 27017:27017
-
+#mongodb:
+#    build: ./images/mongo/
+#    container_name: mongo
+#    ports:
+#        - 27017:27017
+#
 
 ####################################################
 ####################################################

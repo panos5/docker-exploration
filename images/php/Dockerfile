@@ -3,3 +3,18 @@ FROM php:7.0-fpm
 ENV PHPREDIS_VERSION 3.0.0
 
 RUN docker-php-ext-install pdo_mysql
+
+
+#RUN	apt-get -y install php7.0-fpm php7.0-mysql php7.0-curl php7.0-mcrypt php7.0-cli php7.0-dev php-pear libsasl2-dev
+#
+#RUN mkdir -p /usr/local/openssl/include/openssl/ && \
+#    ln -s /usr/include/openssl/evp.h /usr/local/openssl/include/openssl/evp.h && \
+#    mkdir -p /usr/local/openssl/lib/ && \
+#    ln -s /usr/lib/x86_64-linux-gnu/libssl.a /usr/local/openssl/lib/libssl.a && \
+#    ln -s /usr/lib/x86_64-linux-gnu/libssl.so /usr/local/openssl/lib/
+#
+#RUN 	pecl install mongodb
+#
+#RUN echo "extension=mongodb.so" > /etc/php/7.0/fpm/conf.d/20-mongodb.ini && \
+#	echo "extension=mongodb.so" > /etc/php/7.0/cli/conf.d/20-mongodb.ini && \
+#	echo "extension=mongodb.so" > /etc/php/7.0/mods-available/mongodb.ini
