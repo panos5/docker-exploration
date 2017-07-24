@@ -10,9 +10,12 @@ nginx:
     environment:
         - VIRTUAL_HOST=panosapp.localtest.me
 
+####################################################
+####################################################
+
 php:
     build: ./images/php/
-    container_name: my_php_app
+    container_name: php_app
     expose:
         - 9000
     links:
@@ -28,7 +31,8 @@ app:
         - ./www/html:/var/www/html
     command: "true"
 
-
+####################################################
+####################################################
 
 mysql:
     image: mysql:latest
@@ -50,17 +54,28 @@ data:
 
 phpmyadmin:
     image: phpmyadmin/phpmyadmin
+    container_name: phpmyadmin
     ports:
         - 8080:80
     links:
         - mysql
     environment:
         PMA_HOST: mysql
-        
+
+####################################################
+####################################################
+
+
 mongodb: 
     build: ./images/mongo/
+    container_name: mongo
     ports:
         - 27017:27017
+
+
+####################################################
+####################################################
+
 
 #jenkins:
 #    image: jenkins:latest
