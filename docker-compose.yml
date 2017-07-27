@@ -20,7 +20,6 @@ php:
         - 9000
     links:
         - mysql
-        - mongodb
     volumes_from:
         - app
 
@@ -28,7 +27,7 @@ php:
 app:
     image: php:7.0-fpm
     volumes:
-        - ./www/html:/var/www/html
+        - ./www:/var/www
     command: "true"
 
 ####################################################
